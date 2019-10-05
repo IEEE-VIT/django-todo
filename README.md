@@ -9,7 +9,7 @@ Made with :heart: by [IEEE-VIT](https://ieeevit.com)
 
 Support Open Source by participating in [Hacktoberfest](https://hacktoberfest.digitalocean.com/):yellow_heart:
 
-#Getting Started
+# Getting Started
 
 1. To setup this project, create a virtual environment using Python 3.6 or higher and run the following command in your terminal (ensure that you are in the project directory):
     ```bash
