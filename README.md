@@ -34,8 +34,8 @@ Support Open Source by participating in [Hacktoberfest](https://hacktoberfest.di
 
 
 ## Contributing
-To start contributing, check out [CONTRIBUTING.md](https://github.com/mayankshah1607/SimpleMath-NodeJS/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
+To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/Django_To_Do/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
 
 
 ## License
-This project is licensed under [MIT](https://github.com/IEEE-VIT/SimpleMath-NodeJS/blob/master/LICENSE)
+This project is licensed under [MIT](https://github.com/IEEE-VIT/Django_To_Do/blob/master/LICENSE)
