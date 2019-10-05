@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 def index_view(request):
     if request.method == 'GET':
-        return render(request, 'index.html')
+        return render(request, 'Index.html')
     return HttpResponse(405)
