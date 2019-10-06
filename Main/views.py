@@ -18,12 +18,7 @@ def signup_view(request):
         raw_password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=raw_password)
         login(request, user)
-        return redirect("success-signup")
+        return render(request, 'Main/success-signup.html')
     else:
         form = UserCreationForm()
     return render(request, 'Main/signup.html', {'form':form})
-
-def success_view(request):
-    if request.method == 'GET':
-        return render(request, 'Main/success-signup.html')
-    return HttpResponse(405)
