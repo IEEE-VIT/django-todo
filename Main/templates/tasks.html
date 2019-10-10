@@ -1,0 +1,13 @@
+<h1>TASKS</h1>
+
+<ul>
+    {% for t in task %}
+        <li>
+            {{ t.title}}<br>
+            {{ t.description }}<br>
+            {{ t.created }}<br>
+            {{ t.deadline }}<br>
+            {{ t.done }}<br>
+        </li>
+    {% endfor %}
+</ul>
