@@ -13,4 +13,6 @@ def signUp_view(request):
     
 
 def login_view(request):
+    if request.method == 'GET':
+        return render(request, 'Login.html')
     return HttpResponse(405)
