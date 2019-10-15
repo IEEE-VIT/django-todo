@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import Tasks
 
 # Create your views here.
 
@@ -10,7 +11,12 @@ def index_view(request):
 
 def signUp_view(request):
     return HttpResponse(405)
-    
+
 
 def login_view(request):
     return HttpResponse(405)
+
+def tasks_view(request):
+    return render(request, 'Main/tasks.html', {'task': Tasks.objects.all})
+
+def complete(request, task_id):
