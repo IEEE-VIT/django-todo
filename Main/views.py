@@ -17,4 +17,6 @@ def login_view(request):
     return HttpResponse(405)
 
 def tasks_view(request):
-    return render(request, 'tasks.html', {'task': Tasks.objects.all})
+    return render(request, 'Main/tasks.html', {'task': Tasks.objects.all})
+
+def complete(request, task_id):
