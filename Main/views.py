@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -15,9 +16,9 @@ def signUp_view(request):
 def login_view(request):
     username = request.data.get('username')
     password = request.data.get('password')
-    user = authenticate(username, password)
-    if user.is_valid():
-        user.login()
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
         return HttpResponse(201)
     else:
         return HttpResponse(405)
