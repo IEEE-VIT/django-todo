@@ -13,4 +13,11 @@ def signUp_view(request):
     
 
 def login_view(request):
-    return HttpResponse(405)
+    username = request.data.get('username')
+    password = request.data.get('password')
+    user = authenticate(username, password)
+    if user.is_valid():
+        user.login()
+        return HttpResponse(201)
+    else:
+        return HttpResponse(405)
