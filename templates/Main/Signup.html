@@ -7,7 +7,7 @@
     <title>Signup</title>
 </head>
 <body>
-
+    <H1>Welcome, Please fill out your details!</H1>
 <form method="post" action="{% url 'signUp' %}">
     {% csrf_token %}
     <input type="text" placeholder="Username">
@@ -15,6 +15,21 @@
     <input type="text" placeholder="First Name">
     <input type="text" placeholder="Last Name">
     <input type="email" placeholder="Email Address">
+    <input type = "text" placeholder = "Describe yourself!">
+    <ul>
+        <li>
+            Goal 1 : <input type = "text" name = "g1">
+        </li>
+        </li>
+            Goal 2 : <input type = "text" name = "g2">
+        </li>
+         <li>
+            Goal 3 : <input type = "text" name = "g3">
+        </li>
+        <li>
+            Goal 4 : <input type = "text" name = "g4">
+        </li>
+    </ul>
     <input type="submit" value="Submit">
 </form>
 
