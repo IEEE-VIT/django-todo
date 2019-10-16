@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+
+<form method="post" action="{% url 'signUp' %}">
+    {% csrf_token %}
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email Address">
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
