@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
@@ -7,18 +8,21 @@ from django.contrib.auth.forms import UserCreationForm
 
 def index_view(request):
     if request.method == 'GET':
-        return render(request, 'Main/index.html')
+
+        return render(request, 'Index.html')
     return HttpResponse(405)
 
-def signup_view(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():form.save()
-        username = form.cleaned_data.get('username')
-        raw_password = form.cleaned_data.get('password1')
-        user = authenticate(username=username, password=raw_password)
+def signUp_view(request):
+    return HttpResponse(405)
+    
+
+def login_view(request):
+    username = request.data.get('username')
+    password = request.data.get('password')
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
         login(request, user)
-        return render(request, 'Main/success-signup.html')
+        return HttpResponse(201)
     else:
-        form = UserCreationForm()
-    return render(request, 'Main/signup.html', {'form':form})
+        return HttpResponse(405)
+
