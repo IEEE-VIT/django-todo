@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Main.urls'))
 ]
+
+""" 
+    i like pink floyd 
+"""
